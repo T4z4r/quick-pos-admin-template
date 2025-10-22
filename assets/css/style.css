@@ -1,12 +1,13 @@
-/* Revel POS-Style Color Palette */
+/* Revel POS Exact Color Palette */
 :root {
   --primary-color: #007BFF; /* Revel Blue */
-  --secondary-color: #17A2B8; /* Teal */
-  --accent-color: #E9ECEF; /* Light Gray */
-  --dark-bg: #F8F9FA; /* Light Gray */
+  --secondary-color: #6C757D; /* Gray */
+  --accent-color: #F8F9FA; /* Light Gray */
+  --dark-bg: #FFFFFF; /* White */
   --light-bg: #FFFFFF; /* Pure White */
-  --text-color: #333333; /* Dark Gray Text */
-  --card-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --text-color: #212529; /* Dark Text */
+  --border-color: #E9ECEF; /* Light Border */
+  --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 body {
@@ -21,17 +22,17 @@ body {
   height: 100vh;
   transition: all 0.3s;
   background-color: var(--dark-bg) !important;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  border-right: 1px solid var(--border-color);
 }
 
 #sidebar .nav-link {
   color: var(--text-color) !important;
   transition: all 0.3s;
+  border-radius: 4px;
 }
 
 #sidebar .nav-link:hover {
   background-color: var(--primary-color);
-  border-radius: 5px;
   color: white !important;
 }
 
@@ -40,12 +41,13 @@ body {
 }
 
 .navbar {
-  background-color: var(--primary-color) !important;
-  box-shadow: var(--card-shadow);
+  background-color: var(--dark-bg) !important;
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: none;
 }
 
 .navbar .navbar-brand {
-  color: white !important;
+  color: var(--text-color) !important;
   font-weight: 600;
 }
 
@@ -69,20 +71,20 @@ body {
 }
 
 .btn-success:hover {
-  background-color: #138496;
-  border-color: #138496;
+  background-color: #5A6268;
+  border-color: #5A6268;
 }
 
 .card {
-  border: 1px solid #E0E0E0;
-  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
   box-shadow: var(--card-shadow);
-  transition: transform 0.2s;
+  transition: none;
 }
 
 .card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  transform: none;
+  box-shadow: var(--card-shadow);
 }
 
 .product-card img {
