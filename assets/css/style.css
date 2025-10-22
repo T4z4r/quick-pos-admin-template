@@ -36,6 +36,12 @@ body {
   color: white !important;
 }
 
+#sidebar .nav-link.active {
+  background-color: var(--primary-color);
+  color: white !important;
+  border-radius: 4px;
+}
+
 #wrapper.toggled #sidebar {
   margin-left: -240px;
 }
