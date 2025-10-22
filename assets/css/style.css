@@ -54,6 +54,45 @@ body {
   margin-left: 0;
 }
 
+#wrapper.collapsed #sidebar {
+  width: 100px;
+  min-width: 100px;
+  max-width: 100px;
+}
+
+#wrapper.collapsed #sidebar .nav-link {
+  text-align: center;
+  padding: 8px;
+  justify-content: center;
+}
+
+#wrapper.collapsed #sidebar .nav-link i {
+  display: block;
+  font-size: 1.2rem;
+  margin-bottom: 3px;
+}
+
+#wrapper.collapsed #sidebar .nav-link span {
+  font-size: 0.7rem;
+  line-height: 1;
+}
+
+#wrapper.collapsed #sidebar .text-center h4 {
+  font-size: 0.9rem;
+}
+
+#wrapper.collapsed #sidebar .text-center i {
+  font-size: 2rem;
+}
+
+#wrapper.collapsed #page-content {
+  margin-left: 100px;
+}
+
+#wrapper.collapsed .navbar {
+  left: 100px;
+}
+
 #wrapper.toggled .navbar {
   left: 0;
 }
