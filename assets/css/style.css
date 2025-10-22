@@ -20,9 +20,13 @@ body {
   min-width: 240px;
   max-width: 240px;
   height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
   transition: all 0.3s;
   background-color: var(--dark-bg) !important;
   border-right: 1px solid var(--border-color);
+  z-index: 1000;
 }
 
 #sidebar .nav-link {
@@ -46,10 +50,32 @@ body {
   margin-left: -240px;
 }
 
+#wrapper.toggled #page-content {
+  margin-left: 0;
+}
+
+#wrapper.toggled .navbar {
+  left: 0;
+}
+
+#page-content {
+  margin-left: 240px;
+  height: 100vh;
+  overflow-y: auto;
+  transition: margin-left 0.3s;
+  padding-top: 70px; /* Adjust for navbar height */
+}
+
 .navbar {
   background-color: var(--dark-bg) !important;
   border-bottom: 1px solid var(--border-color);
   box-shadow: none;
+  position: fixed;
+  top: 0;
+  left: 240px;
+  right: 0;
+  z-index: 999;
+  transition: left 0.3s;
 }
 
 .navbar .navbar-brand {
