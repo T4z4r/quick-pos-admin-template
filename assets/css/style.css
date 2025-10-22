@@ -1,0 +1,102 @@
+/* Revel POS-Style Color Palette */
+:root {
+  --primary-color: #007BFF; /* Revel Blue */
+  --secondary-color: #17A2B8; /* Teal */
+  --accent-color: #E9ECEF; /* Light Gray */
+  --dark-bg: #F8F9FA; /* Light Gray */
+  --light-bg: #FFFFFF; /* Pure White */
+  --text-color: #333333; /* Dark Gray Text */
+  --card-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--light-bg);
+  color: var(--text-color);
+}
+
+#sidebar {
+  min-width: 240px;
+  max-width: 240px;
+  height: 100vh;
+  transition: all 0.3s;
+  background-color: var(--dark-bg) !important;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+#sidebar .nav-link {
+  color: var(--text-color) !important;
+  transition: all 0.3s;
+}
+
+#sidebar .nav-link:hover {
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  color: white !important;
+}
+
+#wrapper.toggled #sidebar {
+  margin-left: -240px;
+}
+
+.navbar {
+  background-color: var(--primary-color) !important;
+  box-shadow: var(--card-shadow);
+}
+
+.navbar .navbar-brand {
+  color: white !important;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  border-radius: 20px;
+  padding: 8px 16px;
+}
+
+.btn-primary:hover {
+  background-color: #0056B3;
+  border-color: #0056B3;
+}
+
+.btn-success {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+  border-radius: 20px;
+  padding: 8px 16px;
+}
+
+.btn-success:hover {
+  background-color: #138496;
+  border-color: #138496;
+}
+
+.card {
+  border: 1px solid #E0E0E0;
+  border-radius: 8px;
+  box-shadow: var(--card-shadow);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.product-card img {
+  max-height: 100px;
+  object-fit: contain;
+  border-radius: 5px;
+}
+
+.product-card {
+  transition: transform 0.2s ease;
+  border-radius: 10px;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+  box-shadow: var(--card-shadow);
+}
